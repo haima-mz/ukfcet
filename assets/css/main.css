@@ -7,29 +7,30 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Questrial",  sans-serif;
-  --nav-font: "Open Sans",  sans-serif;
+  --default-font: "Poppins", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Questrial", sans-serif;
+  --nav-font: "Open Sans", sans-serif;
 }
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #535d6b; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #07090c; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #344761; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5c99ee; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #022557; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(83, 93, 107, 0.875);  /* The default color of the main navmenu links */
-  --nav-hover-color: #0b1e38; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(4, 6, 8, 0.875);  /* The default color of the main navmenu links */
+  --nav-hover-color: #022557; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #535d6b; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5c99ee; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #090a0c; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #022557; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1549,10 +1550,11 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 25px;
   position: relative;
-  border:5px solid #5c99ee;
-  border-radius: 10%;
+  border: darkblue 5px solid;
+  border-radius: 20px;
+  padding-top: 15px;
 }
 
 .section-title h2 {
@@ -1580,6 +1582,9 @@ section,
   margin-bottom: 0;
 }
 
+.container .section-title div{
+  border: darkblue 5px solid 5%;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1859,7 +1864,7 @@ section,
 --------------------------------------------------------------*/
 .about {
   padding-top: 30px;
-  padding-bottom: 120px;
+  padding-bottom: 40px;
 }
 
 .about .about-image {
@@ -1877,15 +1882,19 @@ section,
 }
 
 .about .content {
-  padding-left: 60px;
-  background-color: cornflowerblue;
+  padding-left: 50px;
+  padding-right: 10px;
+  background-color: #022557;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 991px) {
   .about .content {
     padding-left: 0;
     margin-top: 60px;
-    background-color: cornflowerblue;
+    background-color: #022557;
   }
 
   .about .content p{
@@ -1897,8 +1906,9 @@ section,
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
-  margin-bottom: 30px;
-  color: var(--heading-color);
+  margin-bottom: 15px;
+  color: var(--contrast-color);
+  padding-top: 15px;
 }
 
 .about .content .lead {
@@ -1906,7 +1916,7 @@ section,
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 40px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
 
 .about .content p {
@@ -1991,7 +2001,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-card {
-  background:#344761;
+  background:#022557;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 12px;
   padding: 32px 24px;
@@ -2030,8 +2040,8 @@ section,
 .services .service-icon {
   width: 64px;
   height: 64px;
-  background: color-mix(in srgb, var(--accent-color), transparent 85%);
-  color: var(--accent-color);
+  background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  color: var(--contrast-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2090,7 +2100,7 @@ section,
 @media (max-width: 768px) {
   .services .service-card {
     padding: 24px 20px;
-    background:#344761;
+    background:#022557;
   }
 
   .services .service-card .service-link {
@@ -2139,7 +2149,7 @@ section,
 
 .features .features-card {
   position: relative;
-  background-color: #344761;
+  background-color: #022557;
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   padding: 30px;
@@ -2164,8 +2174,8 @@ section,
 .features .features-card .icon-wrapper {
   width: 70px;
   height: 70px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
-  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  color: var(--contrast-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2206,7 +2216,7 @@ section,
 }
 
 .features .features-card .features-list .feature-item i {
-  color: var(--accent-color);
+  color: var(--contrast-color);
   font-size: 16px;
   margin-right: 10px;
   margin-top: 3px;
@@ -2453,8 +2463,8 @@ section,
 .how-we-work .step-circle {
   width: 70px;
   height: 70px;
-  background: color-mix(in srgb, var(--accent-color), transparent 85%);
-  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  color: var(--contrast-color);
   border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
   border-radius: 50%;
   display: flex;
@@ -2470,7 +2480,7 @@ section,
   font-family: var(--heading-font);
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   transition: all 0.3s ease-in-out;
 }
 
@@ -2500,7 +2510,7 @@ section,
 
 .how-we-work .steps-wrapper{
   /* border: 5px solid color-mix(in srgb, var(--nav-hover-color), transparent 70%); */
-  background:#344761;
+  background:#022557;
 }
 
 @media (max-width: 991px) {
@@ -2523,7 +2533,7 @@ section,
 
   .how-we-work .steps-wrapper{
     /* border: 5px solid color-mix(in srgb, var(--nav-hover-color), transparent 70%); */
-    background:#344761;
+    background:#022557;
   }
 
   .how-we-work .step-item:hover .step-circle {
@@ -2592,7 +2602,7 @@ section,
 }
 
 .tabs .tabs-header .nav-tabs .nav-item .tab-content-preview:hover {
-  background-color: #344761;
+  background-color: deepskyblue;
 }
 
 .tabs .tabs-header .nav-tabs .nav-item .tab-content-preview:hover span h6 small {
@@ -2618,35 +2628,39 @@ section,
 }
 
 .tabs .tabs-header .nav-tabs .nav-link.active {
-  background: var(--accent-color);
+  background: var(--contrast-color);
 }
 
 .tabs .tabs-header .nav-tabs .nav-link.active .tab-content-preview .tab-number {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  color: #022557;
+  background: color-mix(in srgb, var(--heading-color), transparent 85%);
 }
 
+.tabs .tabs-header .nav-tabs .nav-link:hover.active .tab-content-preview .tab-number {
+  color: #022557;
+  background: color-mix(in srgb, var(--heading-color), transparent 85%);
+}
 .tabs .tabs-header .nav-tabs .nav-link.active .tab-content-preview .tab-text h6,
 .tabs .tabs-header .nav-tabs .nav-link.active .tab-content-preview .tab-text small {
-  color: var(--contrast-color);
+  color: #022557;
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) {
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  background: color-mix(in srgb, deepskyblue, transparent 95%);
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-number {
-  background: color-mix(in srgb, #344761, transparent 85%);
-  color: var(--contrast-color);
+  background: color-mix(in srgb,var(--contrast-color), transparent 85%);
+  color: #022557;
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:not(.active) .tab-content-preview .tab-number {
-  background: color-mix(in srgb, #344761, transparent 85%);
+  background: color-mix(in srgb, deepskyblue, transparent 85%);
   color: var(--contrast-color);
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-text h6 {
-  background: color-mix(in srgb, #344761, transparent 85%);
+  background: color-mix(in srgb, deepskyblue, transparent 85%);
   color: var(--contrast-color);
 }
 
@@ -2655,7 +2669,7 @@ section,
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-text small {
-  background: color-mix(in srgb, #344761, transparent 85%);
+  background: color-mix(in srgb, deepskyblue, transparent 85%);
   color: var(--contrast-color);
 }
 

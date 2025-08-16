@@ -2443,6 +2443,7 @@ section,
   padding: 20px;
   position: relative;
   margin-bottom: 30px;
+  color:var(--contrast-color);
 }
 
 .how-we-work .step-item::after {

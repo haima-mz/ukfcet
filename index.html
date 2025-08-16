@@ -708,7 +708,10 @@
 
               Our track record speaks for itself: outstanding academic results, remarkable achievements in co-curricular and extracurricular activities, and graduates who step into the world <b>ready to make an impact</b>. At UKF, we don’t just educate — <b>we empower futures.</b></p>
 
-              <!-- Stats Row -->
+              
+
+            </div>
+            <!-- Stats Row -->
               <div class="stats-row">
                 <div class="stat-item">
                   <h3><span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>+</h3>
@@ -731,8 +734,6 @@
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
-
-            </div>
           </div>
 
         </div>
@@ -749,7 +750,7 @@
         <h2>Departments</h2>
         <p>Diverse disciplines, one shared vision: excellence in engineering.</p>
       </div><!-- End Section Title -->
-
+      <br><br>
       <div class="container">
 
         <div class="row gy-4">
@@ -1222,7 +1223,7 @@
         <h2>How We Work</h2>
         <p>Training & Placement Cell</p>
       </div><!-- End Section Title -->
-
+      <br><br>
       <div class="container">
 
         <div class="steps-wrapper">
@@ -1299,8 +1300,8 @@
                   <div class="tab-content-preview">
                     <span class="tab-number">02</span>
                     <div class="tab-text">
-                      <h6>Strategy</h6>
-                      <small>Business growth</small>
+                      <h6 class="tab-text">Strategy</h6>
+                      <small class="tab-text">Business growth</small>
                     </div>
                   </div>
                 </a>
@@ -2231,7 +2232,7 @@
                   </div>
                   <div class="contact-details">
                     <span class="method-label">Address</span>
-                    <p>892 Park Avenue, Manhattan<br>New York, NY 10075</p>
+                    <p>Near ESIC Medical College,<br>Puthenkulam P.O, <br>Parippally, Kollam,<br>PIN Code 691 302</p>
                   </div>
                 </div>
 
@@ -2241,7 +2242,7 @@
                   </div>
                   <div class="contact-details">
                     <span class="method-label">Email</span>
-                    <p>hello@businessdemo.com</p>
+                    <p>ukfindia@gmail.com</p>
                   </div>
                 </div>
 
@@ -2251,11 +2252,12 @@
                   </div>
                   <div class="contact-details">
                     <span class="method-label">Phone</span>
-                    <p>+1 (555) 789-2468</p>
+                    <p>0474-2577958/59</p>
+                    <p>0474-2577960</p>
                   </div>
                 </div>
 
-                <div class="contact-method">
+                <!-- <div class="contact-method">
                   <div class="contact-icon">
                     <i class="bi bi-clock"></i>
                   </div>
@@ -2263,7 +2265,7 @@
                     <span class="method-label">Hours</span>
                     <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
                   </div>
-                </div>
+                </div> -->
               </div>
 
               <div class="connect-section">
@@ -2303,7 +2305,7 @@
             </a>
             <p class="mb-4">The UKF College of Engineering & Technology has been accorded approval by the All India Council for Technical education (AICTE), New Delhi for conducting 4-year (8-semester) B Tech degree course & 2 -year (4-semester) M.Tech degree course in the following branches.</p>
 
-            <div class="newsletter-form">
+            <!-- <div class="newsletter-form">
               <h5>Stay Updated</h5>
               <form action="forms/newsletter.php" method="post" class="php-email-form">
                 <div class="input-group">
@@ -2316,7 +2318,8 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Thank you for subscribing!</div>
               </form>
-            </div>
+            </div> -->
+            <img src="assets/img/ukf/ukf logo.webp" alt="" width="500px">
           </div>
         </div>
 
@@ -2414,7 +2417,25 @@
     </div>
 
   </footer>
-
+  <span
+      onclick="gotowhatsapp()"
+      class="float" 
+      style="position: fixed;
+              width: 50px;
+              height: 50px;
+              bottom: 70px;
+              right: 120px;
+              color: #fff;
+              border-radius: 50px;
+              text-align: center;
+              cursor: pointer;
+              box-shadow: 2px 2px 3px #999;">
+      <img src="assets/img/ukf/whatsapp.jpg"
+          alt=""
+          height="70px"
+          width="70px"
+          style="border-radius: 15px;"/>                 
+  </span>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -2432,7 +2453,12 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+        function gotowhatsapp(){
+            var url="https://wa.me/916235555544?text=Welcome%20to%20our%20services!";
+            window.open(url,'_blank').focus();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,10 +1,3 @@
-/**
-* Template Name: Devin
-* Template URL: https://bootstrapmade.com/devin-bootstrap-template/
-* Updated: Jul 23 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 @charset "UTF-8";
 
@@ -1558,6 +1551,8 @@ section,
   text-align: center;
   padding-bottom: 60px;
   position: relative;
+  border:5px solid #5c99ee;
+  border-radius: 10%;
 }
 
 .section-title h2 {
@@ -1883,12 +1878,18 @@ section,
 
 .about .content {
   padding-left: 60px;
+  background-color: cornflowerblue;
 }
 
 @media (max-width: 991px) {
   .about .content {
     padding-left: 0;
     margin-top: 60px;
+    background-color: cornflowerblue;
+  }
+
+  .about .content p{
+    color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   }
 }
 
@@ -1912,7 +1913,7 @@ section,
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
 }
 
 .about .stats-row {
@@ -1990,7 +1991,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-card {
-  background: var(--surface-color);
+  background:#344761;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 12px;
   padding: 32px 24px;
@@ -2004,17 +2005,22 @@ section,
 .services .service-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  box-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 85%);  
+  background-color:deepskyblue;
 }
 
 .services .service-card:hover .service-icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--contrast-color);
+  color: var(--accent-color);
   transform: scale(1.1);
 }
 
 .services .service-card:hover .service-link {
-  color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.services .service-card .service-link {
+  color: var(--contrast-color);
 }
 
 .services .service-card:hover .service-link i {
@@ -2044,6 +2050,11 @@ section,
   font-weight: 600;
   margin-bottom: 16px;
   line-height: 1.3;
+  color: var(--contrast-color);
+}
+
+.services .service-card:hover h3{
+  color: var(--contrast-color);
 }
 
 .services p {
@@ -2051,6 +2062,14 @@ section,
   margin-bottom: 24px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.services .service-card:hover p{
+  color: var(--contrast-color);
+}
+
+.services .service-card p{
+  color: var(--contrast-color);
 }
 
 .services .service-link {
@@ -2071,6 +2090,11 @@ section,
 @media (max-width: 768px) {
   .services .service-card {
     padding: 24px 20px;
+    background:#344761;
+  }
+
+  .services .service-card .service-link {
+    color: var(--contrast-color);
   }
 
   .services .service-icon {
@@ -2086,10 +2110,15 @@ section,
   .services h3 {
     font-size: 18px;
     margin-bottom: 12px;
+    color: var(--contrast-color);
   }
 
   .services p {
     margin-bottom: 20px;
+  }
+
+  .services .service-card p{
+    color: var(--contrast-color);
   }
 }
 
@@ -2110,7 +2139,7 @@ section,
 
 .features .features-card {
   position: relative;
-  background-color: var(--surface-color);
+  background-color: #344761;
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   padding: 30px;
@@ -2124,11 +2153,12 @@ section,
 .features .features-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: deepskyblue;
 }
 
 .features .features-card:hover .icon-wrapper {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--contrast-color);
+  color: var(--accent-color);
 }
 
 .features .features-card .icon-wrapper {
@@ -2152,13 +2182,13 @@ section,
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--heading-color);
+  color: var(--contrast-color);
 }
 
 .features .features-card p {
   font-size: 15px;
   margin-bottom: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
 
 .features .features-card .features-list {
@@ -2184,7 +2214,7 @@ section,
 
 .features .features-card .features-list .feature-item span {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 10%);
 }
 
 .features .features-card .image-container {
@@ -2423,7 +2453,8 @@ section,
 .how-we-work .step-circle {
   width: 70px;
   height: 70px;
-  background-color: var(--surface-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
   border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
   border-radius: 50%;
   display: flex;
@@ -2444,27 +2475,32 @@ section,
 }
 
 .how-we-work .step-item:hover .step-circle {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--contrast-color);
+  color: var(--accent-color);
   transform: scale(1.1);
 }
 
 .how-we-work .step-item:hover .step-circle span {
-  color: var(--contrast-color);
+  color: var(--accent-color);
 }
 
 .how-we-work h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   font-weight: 600;
-  color: var(--heading-color);
+  color: var(--contrast-color);
 }
 
 .how-we-work p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+.how-we-work .steps-wrapper{
+  /* border: 5px solid color-mix(in srgb, var(--nav-hover-color), transparent 70%); */
+  background:#344761;
 }
 
 @media (max-width: 991px) {
@@ -2483,6 +2519,16 @@ section,
 
   .how-we-work h3 {
     font-size: 1.2rem;
+  }
+
+  .how-we-work .steps-wrapper{
+    /* border: 5px solid color-mix(in srgb, var(--nav-hover-color), transparent 70%); */
+    background:#344761;
+  }
+
+  .how-we-work .step-item:hover .step-circle {
+    background: var(--contrast-color);
+    color: var(--accent-color);
   }
 }
 
@@ -2527,7 +2573,7 @@ section,
   border: none;
   justify-content: center;
   gap: 0;
-  background: var(--surface-color);
+  background: var(--nav-dropdown-hover-color);
   border-radius: 8px;
   padding: 8px;
   box-shadow: 0 2px 20px color-mix(in srgb, var(--default-color), transparent 94%);
@@ -2544,6 +2590,15 @@ section,
   flex: 1;
   cursor: pointer;
 }
+
+.tabs .tabs-header .nav-tabs .nav-item .tab-content-preview:hover {
+  background-color: #344761;
+}
+
+.tabs .tabs-header .nav-tabs .nav-item .tab-content-preview:hover span h6 small {
+  color:var(--contrast-color);
+}
+
 
 @media (max-width: 768px) {
   .tabs .tabs-header .nav-tabs .nav-item {
@@ -2581,8 +2636,31 @@ section,
 }
 
 .tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-number {
-  background: color-mix(in srgb, var(--accent-color), transparent 85%);
-  color: var(--accent-color);
+  background: color-mix(in srgb, #344761, transparent 85%);
+  color: var(--contrast-color);
+}
+
+.tabs .tabs-header .nav-tabs .nav-link:not(.active) .tab-content-preview .tab-number {
+  background: color-mix(in srgb, #344761, transparent 85%);
+  color: var(--contrast-color);
+}
+
+.tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-text h6 {
+  background: color-mix(in srgb, #344761, transparent 85%);
+  color: var(--contrast-color);
+}
+
+.tabs .tabs-header .nav-tabs .nav-link:not(.active) .tab-content-preview .tab-text h6 {
+  color: var(--contrast-color);
+}
+
+.tabs .tabs-header .nav-tabs .nav-link:hover:not(.active) .tab-content-preview .tab-text small {
+  background: color-mix(in srgb, #344761, transparent 85%);
+  color: var(--contrast-color);
+}
+
+.tabs .tabs-header .nav-tabs .nav-link:not(.active) .tab-content-preview .tab-text small {
+  color: var(--contrast-color);
 }
 
 .tabs .tabs-header .nav-tabs .nav-link .tab-content-preview {

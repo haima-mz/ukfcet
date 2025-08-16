@@ -2502,7 +2502,6 @@ section,
 }
 
 .how-we-work p {
-  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0;

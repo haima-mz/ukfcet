@@ -9,7 +9,7 @@
 :root {
   --default-font: "Poppins", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Questrial", sans-serif;
-  --nav-font: "Open Sans", sans-serif;
+  --nav-font: "Barlow", sans-serif;
 }
 
 
@@ -25,12 +25,12 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(4, 6, 8, 0.875);  /* The default color of the main navmenu links */
-  --nav-hover-color: #022557; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(6, 97, 166, 0.811);  /* The default color of the main navmenu links */
+  --nav-hover-color: #051ba9; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #090a0c; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #022557; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: rgb(7, 8, 8); /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #051ba9; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -145,6 +145,7 @@ h6 {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  width: 100%;
 }
 
 .header .logo {
@@ -174,14 +175,22 @@ h6 {
 .scrolled .header {
   --background-color: #ffffff;
 }
-
+@media (min-width: 410px) {
+  header{
+    width: 410px;
+  }
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+.navmenu{
+  font-size: 14px;
+}
+@media (min-width: 1000px) {
+ 
   .navmenu {
-    padding: 0;
+    padding-right: 100px;
   }
 
   .navmenu ul {
@@ -208,10 +217,10 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 14px;
+    font-size: 18px;
     padding: 0 2px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -314,7 +323,7 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 50px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -519,7 +528,7 @@ h6 {
   }
 
   .navmenu .megamenu-2 .tab-navigation .nav-tabs .nav-item .nav-link.active span {
-    color: var(--accent-color);
+    color: var(--nav-hover-color);
     font-weight: 600;
   }
 

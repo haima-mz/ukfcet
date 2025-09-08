@@ -1633,6 +1633,14 @@ section,
     padding-right: 0;
     text-align: center;
     margin-bottom: 50px;
+    max-height: 90vh;
+    
+  }
+  .hero{
+    padding: 120px 0 0px 0;
+  }
+  .hero .container {
+    padding: 0px 40px;
   }
 }
 
@@ -1901,7 +1909,7 @@ section,
 
 @media (max-width: 991px) {
   .about .content {
-    padding-left: 0;
+    padding-left: 10px;
     margin-top: 60px;
     background-color: #022557;
   }
@@ -5863,7 +5871,7 @@ section,
 }
 
 .overlays {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -5984,7 +5992,62 @@ section,
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 768px)  {
+  .half-circle-top {
+  position: absolute;
+  bottom: 100%;
+  left: 10%;
+  width: 112px;
+  height: 57px;
+  border-top-left-radius: 220px;
+  border-top-right-radius: 220px;
+  z-index: 1;
+}
 
+.half-circle-bottom {
+  position: absolute;
+  top: 117%;
+  left: 53%;
+  width: 112px;
+  height: 57px;
+  border-bottom-left-radius: 220px;
+  border-bottom-right-radius: 220px;
+  z-index: 1;
+}
+.circle-img {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-circle {
+  position: absolute;
+  right: 18%;
+  bottom: -6%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 0, 200, 0.6); /* purple shade */
+  mix-blend-mode: luminosity; /* cool color effect */
+}
+
+.overlay-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+}
 /*** Gradient for Heading ***/
 .gradient-heading {
     background: linear-gradient(90.66deg, #40b1ff .12%, #6ef5bf 36.27%, #ffe924 80.46%);
@@ -6011,6 +6074,11 @@ section,
   margin-left: 80px;
   margin-left: 80px;
 }
+@media (max-width: 768px){
+  .gradient-text{
+    display: none;
+  }
+}
 
 /*** Management team ***/
 .team-img {
@@ -6020,6 +6088,15 @@ section,
       border-radius: 10px;
       cursor: pointer;
       transition: transform 0.3s;
+    }
+    .team-img-unknown {
+      width: 52%;
+      height: 291px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      margin-bottom: 60px;
     }
     .team-img:hover {
       transform: scale(1.05);
@@ -6045,7 +6122,16 @@ section,
       padding-left: 10px;
       margin-bottom: 15px;
     }
-
+    @media (max-width: 768px){
+      .team-img {
+      width: 53%;
+      height: 309px;
+      }
+      .team-img-unknown {
+      
+      margin-bottom: 0px;
+    }
+    }
     /*** Vision and Mission ***/
      .sticky-heading {
       position: sticky;

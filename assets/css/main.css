@@ -7,7 +7,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Poppins", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Poppins", sans-serif, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Questrial", sans-serif;
   --nav-font: "Barlow", sans-serif;
 }
@@ -60,6 +60,14 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased; /* Safari, Chrome */
+  -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
 }
 
 a {
@@ -179,6 +187,11 @@ h6 {
   header{
     width: 410px;
   }
+@media(max-width:640px){
+  .header .logo img {
+    width:250px;
+    height:95px;
+}
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -5875,7 +5888,7 @@ section,
   bottom: 0;
   left: 0;
   right: 0;
-  background: #f36f21; /* orange */
+  background: #022557; /* #f36f21;orange */
   color: #fff;
   padding-top: 0rem;
   padding-left: 0.5rem;

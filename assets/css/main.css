@@ -183,10 +183,12 @@ h6 {
 .scrolled .header {
   --background-color: #ffffff;
 }
-@media (min-width: 410px) {
+/* @media (min-width: 410px) {
   header{
     width: 410px;
   }
+------------------------------*/
+
 @media(max-width:640px){
   .header .logo img {
     width:250px;

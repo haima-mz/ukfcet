@@ -6090,8 +6090,15 @@ section,
   margin-left: 80px;
 }
 @media (max-width: 768px){
-  .gradient-text{
+    .gradient-text{
     display: none;
+  }
+  .gradient-heading {
+    font-size: 50px;
+    padding-top: 50px;
+  }
+  .gradient-sub-heading {
+    font-size: 50px;
   }
 }
 

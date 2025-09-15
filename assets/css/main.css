@@ -6065,7 +6065,7 @@ section,
 }
 /*** Gradient for Heading ***/
 .gradient-heading {
-    background: linear-gradient(90.66deg, #40b1ff .12%, #6ef5bf 36.27%, #ffe924 80.46%);
+    background: linear-gradient(90.66deg, #ffeeee .12%, #ddefbb 36.27%);
     color: transparent;
     background-clip: text;
     display: inline-block;

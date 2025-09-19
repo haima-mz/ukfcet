@@ -23,6 +23,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -848,7 +849,7 @@
           <!-- Image Column -->
           <div class="col-lg-6">
             <div class="about-image">              
-              <img src="assets/img/ukf/college.webp" alt="About" class="img-fluid">
+              <img src="assets/img/ukf/college.webp" alt="About" class="img-fluid"> 
               <div class="content">
                 <h4 class="lead">Discover Your Future at <b>UKF College of Engineering and Technology</b></h4>
                 <p>Our track record speaks for itself: outstanding academic results, remarkable achievements in co-curricular and extracurricular activities, and graduates who step into the world <b>ready to make an impact</b>. At UKF, we don’t just educate — <b>we empower futures.</b>
@@ -907,6 +908,9 @@
         <p>Diverse disciplines, one shared vision: excellence in engineering.</p>
       </div><!-- End Section Title -->
       <br><br>
+      <!-- CSS - Cards - Flip 360 -->
+
+
       <div class="container">
 
         <div class="row gy-4">
@@ -2615,6 +2619,40 @@
             window.open(url,'_blank').focus();
         }
     </script>
+
+<script>
+// filepath: c:\Users\KRN MENON\Downloads\UKF Templates\ukfcet-main\index.html
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll('.service-card');
+  setInterval(() => {
+    cards.forEach(card => {
+      card.classList.remove('animate-shade');
+      // Force reflow to restart animation
+      void card.offsetWidth;
+      card.classList.add('animate-shade');
+    });
+  }, 5000);
+});
+</script>
+<script>
+// filepath: c:\Users\KRN MENON\Downloads\UKF Templates\ukfcet-main\index.html
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 767) {
+    const steps = document.querySelectorAll('.how-we-work .col-lg-3');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible-step');
+        } else {
+          entry.target.classList.remove('visible-step');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    steps.forEach(step => observer.observe(step));
+  }
+});
+</script>
 </body>
 
 </html>
